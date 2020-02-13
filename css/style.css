@@ -1,0 +1,495 @@
+@font-face {
+	font-family: 'Roboto Slab';
+	src: url('../fonts/RobotoSlab-Bold.eot');
+	src: url('../fonts/RobotoSlab-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/RobotoSlab-Bold.woff2') format('woff2'), url('../fonts/RobotoSlab-Bold.woff') format('woff'), url('../fonts/RobotoSlab-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Regular.eot');
+	src: url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-Regular.woff2') format('woff2'), url('../fonts/Roboto-Regular.woff') format('woff'), url('../fonts/Roboto-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Bold.eot');
+	src: url('../fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-Bold.woff2') format('woff2'), url('../fonts/Roboto-Bold.woff') format('woff'), url('../fonts/Roboto-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+body {
+	font-family: 'Roboto', serif;
+	font-size: 14px;
+}
+
+label::selection {
+	background-color: orangered;
+	color: white;
+}
+
+.wrapper {
+	width: 95%;
+	margin: 0 auto;
+	padding: 75px 0 145px;
+}
+
+.clear::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.fieldset {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+input, textarea, select {
+	box-sizing: border-box;
+}
+
+.polya {
+	border-collapse: collapse;
+}
+
+.polya td:first-child {
+	vertical-align: top;
+	padding: 20px 0;
+}
+
+h1 {
+	color: #1f222c;
+	text-align: center;
+	font: 700 30px "Roboto Slab", serif;
+}
+
+h2 {
+	margin: 0;
+	padding-top: 75px;
+	color: #b3b3b3;
+	font: 700 20px "Roboto";
+	text-transform: uppercase;
+}
+
+.prosta {
+	width: 330px;
+}
+
+.text, .town, .textarea {
+	width: 100%;
+	padding: 10.5px 15px;
+	color: #b3b3b3;
+	font-weight: 400;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+
+.town {
+	color: #1f222c;
+}
+
+.silver,
+.silverbold {
+	font-size: 14px;
+	color: #b3b3b3;
+	font-family: "Roboto";
+	font-weight: 400;
+}
+
+.silverbold {
+	font-weight: 700;
+}
+
+.triangle {
+	position: relative;
+}
+
+.triangle::before {
+	position: absolute;
+	content: '';
+	right: 17px;
+	top: 2px;
+	border: 5px solid #1f222c;
+	border-left-color: transparent;
+	border-top-color: transparent;
+	transform: rotate(45deg);
+	z-index: -1;
+}
+
+.triangle select {
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: transparent;
+}
+
+.town option:first-child {
+	display: none;
+}
+
+.textarea {
+	min-height: 50px;
+	max-height: 300px;
+	height: 130px;
+	color: #b3b3b3;
+	resize: vertical;
+}
+
+.submit {
+	width: 100%;
+	height: 42px;
+	color: #fff;
+	font-weight: 700;
+	text-align: center;
+	background-color: #12d661;
+	border: 1px solid #12d661;
+	border-radius: 3px;
+}
+
+.submit:hover {
+	cursor: pointer;
+	box-shadow: 0 2px 2.5px rgba(71, 204, 124, 0.35);
+	background-color: #07be51;
+}
+
+.elements {
+	width: 50%;
+	float: left;
+}
+
+.elements p {
+	position: relative;
+	margin: 7px 0;
+}
+
+.circle {
+	width: 33.5%;
+	float: left;
+}
+
+.square {
+	width: 66.5%;
+	float: right;
+}
+
+.status {
+	float: right;
+	width: 50%;
+	border: 1px solid #e5e5e5;
+	border-radius: 3px;
+	overflow: hidden;
+	padding: 5px 20px 15px;
+	background-color: #f7f7f7;
+}
+
+.status p {
+	margin: 0;
+	line-height: 40px;
+}
+.status td:first-child {
+	width: 70px;
+}
+.mr12 {
+	margin-right: 12px;
+}
+.date {
+	padding: 9px;
+	border: 1px solid #e5e5e5;
+	border-radius: 3px;
+}
+
+.radio {
+	appearance: none;
+	-webkit-appearance: none;
+	position: absolute;
+}
+
+.radio+label,
+.checkbox+label {
+	padding-left: 25px;
+	position: relative;
+}
+.radio+label::before,
+.radio+label::after,
+.checkbox+label::before,
+.checkbox+label::after{
+	content: "";
+	position: absolute;
+	background-color: #fff;
+	left: 0;
+	top: 0;
+}
+.radio:disabled+label::before,
+.checkbox:disabled+label::before {
+	border-color: #e5e5e5;
+	background-color: #f7f7f7;
+}
+.radio+label::before {
+	width: 15px;
+	height: 15px;
+	border: 1px solid #d0d0d0;
+	border-radius: 50%;
+}
+
+.radio:checked+label::before {
+	border-color: #4e76ff;
+}
+
+.radio:checked+label::after {
+	width: 9px;
+	height: 9px;
+	background-color: #3e6aff;
+	border-radius: 50%;
+	left: 4px;
+	top: 4px;
+}
+.checkbox {
+	appearance: none;
+	-webkit-appearance: none;
+	position: absolute;
+}
+
+.checkbox+label::before {
+	width: 17px;
+	height: 17px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+
+.checkbox:checked+label::before {
+	border: 1px solid #3d69ff;
+}
+
+.checkbox:checked+label::after {
+	top: 2px;
+	left: 5px;
+	width: 4px;
+	height: 6px;
+	border: 2px solid #254ed7;
+	border-left-color: transparent;
+	border-top-color: transparent;
+	transform: rotate(32deg);
+}
+.calendar {
+	position: relative;
+}
+
+.calendar::before {
+	content: "";
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	right: 13px;
+	top: -2px;
+	background-image: url(/images/kalendar.png);
+}
+.date::-webkit-inner-spin-button,
+.date::-webkit-calendar-picker-indicator {
+	opacity: 0;
+}
+.date::-webkit-inner-spin-button:hover {
+	opacity: 1;
+}
+
+.man,
+.woman,
+.extra {
+	appearance: none;
+	-webkit-appearance: none;
+	position: absolute;
+	outline: none;
+}
+
+.man+label,
+.woman+label {
+	padding-left: 83px;
+	position: relative;
+	color: #1f222c;
+	font: 700 16px /70px 'Roboto';
+}
+
+.man+label::before,
+.woman+label::before,
+.man:checked+label::before,
+.woman:checked+label::before {
+	content: "";
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	left: 0;
+}
+
+.man:checked+label,
+.woman:checked+label {
+	color: #3e6aff;
+}
+
+.man+label::before {
+	background-image: url(/images/men-black.png);
+}
+
+.woman+label::before {
+	background-image: url(/images/girl-black.png);
+}
+
+.man:checked+label::before{
+	background-image: url(/images/men-color.png);
+}
+
+.woman:checked+label::before {
+	background-image: url(/images/girl-color.png);
+}
+
+.extra+label {
+	padding-left: 65px;
+	position: relative;
+}
+
+.extra+label::before,
+.extra+label::after {
+	content: "";
+	position: absolute;
+}
+
+.extra+label::before {
+	width: 45px;
+	height: 25px;
+	top: 0;
+	left: 0;
+	background-color: #cfcfd1;
+	border-radius: 12px;
+}
+
+.extra+label::after {
+	width: 21px;
+	height: 21px;
+	left: 2px;
+	top: 2px;
+	border-radius: 11px;
+	background-color: #fff;
+	transition: all .5s ease;
+}
+
+.extra:checked+label::before {
+	background-color: #3e6aff;
+}
+
+.extra:checked+label::after {
+	left: 21px;
+	box-shadow: 0 0 2.5px rgba(0,0,0,0.5);
+}
+
+.choice p {
+	line-height: 40px;
+}
+
+.legend {
+	margin: 0;
+	padding-top: 40px;
+	font-size: 18px;
+	color: #1f222c;
+	font-weight: 700;
+}
+
+.one-cell {
+	width: 160px;
+}
+
+.two-cell {
+	width: 340px;
+}
+
+.file {
+	visibility: hidden;
+	height: 40px;
+}
+
+.file-two {
+	position: absolute;
+	padding: 11.5px 37px;
+	left: 0;
+	color: #fff;
+	font-weight: 700;
+	border-radius: 3px;
+	background-color: #3e6aff;
+}
+
+.file-two:hover {
+	cursor: pointer;
+	box-shadow: 0 2px 2.5px rgba(15,40,126,0.35);
+	background-color: #2857f4;
+}
+
+.registration {
+	width: 68%;
+}
+
+td {
+	position: relative;
+}
+
+.newtext {
+	position: absolute;
+	margin-top: 25px;
+}
+
+.newtable {
+	margin: 45px 0 30px;
+	padding: 11px 24.5px;
+	color: #b3b3b3;
+	font-weight: 400;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+
+.adress {
+	margin-top: 45px;
+	padding: 11px 138px;
+	color: #b3b3b3;
+	font-weight: 400;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+
+.buttomsilver,
+.buttomgreen {
+	padding: 11.5px 25px;
+	font-weight: 700;
+	border-radius: 3px;
+}
+
+.buttomsilver {
+	float: left;
+	color: #6e6f77;
+	background-color: #fff;
+	border: 1px solid #84868d;
+}
+
+.buttomsilver:hover {
+	cursor: pointer;
+	background-color: #85868d;
+	color: #fff;
+}
+.buttomgreen {
+	float: right;
+	color: #fff;
+	font-weight: 700;
+	text-align: center;
+	background-color: #12d661;
+	border: 1px solid;
+}
+
+.buttomgreen:hover {
+	cursor: pointer;
+	box-shadow: 0 2px 2.5px rgba(71, 204, 124, 0.35);
+	background-color: #07be51;
+}
+
+.twobutton {
+	width: 100%;
+	height: 100%;
+}
